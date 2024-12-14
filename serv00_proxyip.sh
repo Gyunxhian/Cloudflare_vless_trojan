@@ -490,11 +490,11 @@ NAME="$ISP-$(get_name)"
 rm -rf jh.txt
 vl_link="vless://$UUID@$IP:$vless_port?encryption=none&flow=xtls-rprx-vision&security=reality&sni=$reym&fp=chrome&pbk=$public_key&type=tcp&headerType=none#$NAME-reality"
 echo "$vl_link" >> jh.txt
-vmws_link="vmess://$(echo "{ \"v\": \"2\", \"ps\": \"$NAME-vmess-ws\", \"add\": \"$IP\", \"port\": \"$vmess_port\", \"id\": \"$UUID\", \"aid\": \"0\", \"scy\": \"none\", \"net\": \"ws\", \"type\": \"none\", \"host\": \"\", \"path\": \"/$UUID-vm?ed=2048\", \"tls\": \"\", \"sni\": \"\", \"alpn\": \"\", \"fp\": \"\"}" | base64 -w0)"
+vmws_link="vmess://$(echo "{ \"v\": \"2\", \"ps\": \"$NAME-vmess-ws\", \"add\": \"$IP\", \"port\": \"$vmess_port\", \"id\": \"$UUID\", \"aid\": \"0\", \"scy\": \"auto\", \"net\": \"ws\", \"type\": \"none\", \"host\": \"\", \"path\": \"/$UUID-vm?ed=2048\", \"tls\": \"\", \"sni\": \"\", \"alpn\": \"\", \"fp\": \"\"}" | base64 -w0)"
 echo "$vmws_link" >> jh.txt
-vmatls_link="vmess://$(echo "{ \"v\": \"2\", \"ps\": \"$NAME-vmess-ws-tls-argo\", \"add\": \"icook.hk\", \"port\": \"8443\", \"id\": \"$UUID\", \"aid\": \"0\", \"scy\": \"none\", \"net\": \"ws\", \"type\": \"none\", \"host\": \"$argodomain\", \"path\": \"/$UUID-vm?ed=2048\", \"tls\": \"tls\", \"sni\": \"$argodomain\", \"alpn\": \"\", \"fp\": \"\"}" | base64 -w0)"
+vmatls_link="vmess://$(echo "{ \"v\": \"2\", \"ps\": \"$NAME-vmess-ws-tls-argo\", \"add\": \"icook.hk\", \"port\": \"8443\", \"id\": \"$UUID\", \"aid\": \"0\", \"scy\": \"auto\", \"net\": \"ws\", \"type\": \"none\", \"host\": \"$argodomain\", \"path\": \"/$UUID-vm?ed=2048\", \"tls\": \"tls\", \"sni\": \"$argodomain\", \"alpn\": \"\", \"fp\": \"\"}" | base64 -w0)"
 echo "$vmatls_link" >> jh.txt
-vma_link="vmess://$(echo "{ \"v\": \"2\", \"ps\": \"$NAME-vmess-ws-argo\", \"add\": \"icook.hk\", \"port\": \"8880\", \"id\": \"$UUID\", \"aid\": \"0\", \"scy\": \"none\", \"net\": \"ws\", \"type\": \"none\", \"host\": \"$argodomain\", \"path\": \"/$UUID-vm?ed=2048\", \"tls\": \"\"}" | base64 -w0)"
+vma_link="vmess://$(echo "{ \"v\": \"2\", \"ps\": \"$NAME-vmess-ws-argo\", \"add\": \"icook.hk\", \"port\": \"8880\", \"id\": \"$UUID\", \"aid\": \"0\", \"scy\": \"auto\", \"net\": \"ws\", \"type\": \"none\", \"host\": \"$argodomain\", \"path\": \"/$UUID-vm?ed=2048\", \"tls\": \"\"}" | base64 -w0)"
 echo "$vma_link" >> jh.txt
 hy2_link="hysteria2://$UUID@$IP:$hy2_port?sni=www.bing.com&alpn=h3&insecure=1#$NAME-hy2"
 echo "$hy2_link" >> jh.txt
@@ -1062,15 +1062,15 @@ fi
 #主菜单
 menu() {
    clear
-   echo "======================================================"
+   echo "========================================================="
    purple "修改自Serv00|ct8老王sing-box安装脚本"
    purple "转载请著名出自老王，请勿滥用"
    green "甬哥Github项目  ：github.com/yonggekkk"
    green "甬哥Blogger博客 ：ygkkk.blogspot.com"
    green "甬哥YouTube频道 ：www.youtube.com/@ygkkk"
    green "一键三协议共存：vless-reality、Vmess-ws(Argo)、hysteria2"
-   green "V24.12.14"
-   echo "======================================================"
+   green "当前脚本版本：V24.12.14"
+   echo "========================================================="
    green  "1. 安装sing-box"
    echo   "------------------------------------------------------"
    red    "2. 卸载sing-box"
@@ -1079,7 +1079,7 @@ menu() {
    echo   "------------------------------------------------------"
    green  "4. 查看sing-box与clash-meta配置文件"
    echo   "------------------------------------------------------"
-   yellow "5. 重置并清理所有服务进程"
+   yellow "5. 重置并清理所有服务进程(系统初始化)"
    echo   "------------------------------------------------------"
    red    "0. 退出脚本"
    echo   "======================================================"
