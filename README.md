@@ -1,14 +1,16 @@
 # Cloudflare-workers/pages代理脚本
-### 本项目仅支持本地化部署
-### 本项目配置都为本地化编辑，不使用订阅器、订阅转换等第三方外链引用，无需担心节点订阅被外链作者查看
+### 1、本项目仅支持本地化部署
+### 2、本项目配置都为本地化编辑，不使用订阅器、订阅转换等第三方外链引用
+### 3、无需担心节点订阅信息被订阅器作者或者订阅转换作者后台查看
 --------------------------------
 ## 脚本特色：
-#### 懒人小白专用！默认节点都为CF官方IP，无需频繁更新订阅获取客户端优选IP
-#### 为减少新手小白额外的成本，本项目不推荐使用自定义域名，如果你一定要用自定义域名，也可以
-#### Workers方式：支持vless+ws+tls、trojan+ws+tls、vless+ws、trojan+ws代理节点
-#### Pages方式：支持vless+ws+tls、trojan+ws+tls代理节点
-#### 支持单节点链接、聚合通用节点订阅、sing-box节点订阅、clash节点订阅
-#### 虽然仅乱码混淆版可用，但只有修改uuid/密码时才必须使用变量
+#### 1、懒人小白专用！默认节点都为CF官方IP，无需频繁更新订阅获取客户端优选IP
+#### 2、为减少新手小白额外的成本，本项目不推荐使用自定义域名，如果你一定要用自定义域名，也可以
+#### 3、当在CF点击部署按钮后，可直接手搓节点或者使用分享链接，最多设置一个uuid/密码，其他不用改
+#### 4、Workers方式：支持vless+ws+tls、trojan+ws+tls、vless+ws、trojan+ws代理节点
+#### 5、Pages方式：支持vless+ws+tls、trojan+ws+tls代理节点
+#### 6、支持单节点链接、聚合通用节点链接、聚合通用节点订阅、sing-box节点订阅、clash节点订阅
+#### 7、虽然仅乱码混淆版可用，但只有修改uuid/密码时才必须使用变量
 -------------------------------------------------------------
 
 ### 交流平台：[甬哥博客地址](https://ygkkk.blogspot.com)、[甬哥YouTube频道](https://www.youtube.com/@ygkkk)、[甬哥TG电报群组](https://t.me/+jZHc6-A-1QQ5ZGVl)、[甬哥TG电报频道](https://t.me/+DkC9ZZUgEFQzMTZl)
@@ -96,9 +98,9 @@
 
 详细设置视频教程，请点击[Serv00最全面的代理脚本](https://youtu.be/2VF9D6z2z7w)
 
-Serv00专用一键脚本 (默认自动安装进程保活)：
+Serv00专用一键脚本 (默认自动安装进程保活)，快捷方式：```bash serv00.sh```
 ```
-bash <(curl -Ls https://raw.githubusercontent.com/yonggekkk/Cloudflare_vless_trojan/main/serv00_proxyip.sh)
+curl -sSL https://raw.githubusercontent.com/yonggekkk/Cloudflare_vless_trojan/main/serv00.sh -o serv00.sh && bash serv00.sh
 ```
 脚本界面预览图：
 
